@@ -10,7 +10,7 @@ import plotly.express as px  # For visualizing prediction confidence
 st.set_page_config(page_title="MindScope", layout="wide")  # Sets the title and layout of the web app
 
 #%% Load fine-tuned BERT model and tokenizer from local path
-MODEL_PATH = r"C:/Users/PRATHIKSHA/Downloads/colab_files/final_model_bert_full"  # Path where my fine-tuned model is saved
+MODEL_PATH = r"/final_model_bert_full"  # Path where my fine-tuned model is saved
 
 @st.cache_resource  # Cache the model and tokenizer so they don’t reload every time
 def load_model():
@@ -186,3 +186,4 @@ with bottom:
                 st.markdown(f"<div class='chat-bubble-user'>User: {msg['content']}</div>", unsafe_allow_html=True)  # Display user message
             else:
                 st.markdown(msg["content"], unsafe_allow_html=True)  # Display bot message
+
